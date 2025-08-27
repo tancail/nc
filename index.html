@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cây xanh quán — Bán Nước Online</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Cây xanh quán</div>
+      <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#">Sản phẩm</a>
+        <a href="#">Liên hệ</a>
+        <a href="#">Thông báo</a>
+      </nav>
+      <div class="qi">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Tìm kiếm nước uống..."
+        />
+        <button onclick="searchProduct()">Tìm</button>
+      </div>
+    </header>
+    <section class="li" id="productList"></section>
+    <section class="hi">
+      <h1>Nước ngon mỗi ngày</h1>
+      <p>Trà sữa, cà phê, nước lọc và nhiều loại khác</p>
+      <button class="mua">Mua ngay</button>
+    </section>
+    <footer>
+      <p>© 2025 Cây xanh quán. Liên hệ: câyxanhquán@gmail.com</p>
+      <p id="currentTime"></p>
+    </footer>
+    <div class="ai-fab" id="aiFab" aria-label="Mở Trợ lý AI">
+      <div class="ai-fab__bubble" id="aiFabBtn" role="button" tabindex="0">
+        <svg class="bot" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect
+            x="4"
+            y="7"
+            width="16"
+            height="12"
+            rx="6"
+            fill="#111"
+            opacity=".9"
+          />
+          <circle cx="9" cy="13" r="1.75" fill="#FFD43B" />
+          <circle cx="15" cy="13" r="1.75" fill="#FFD43B" />
+          <rect x="10" y="2" width="4" height="3" rx="1" fill="#111" />
+          <rect x="11" y="5" width="2" height="2" rx="1" fill="#111" />
+        </svg>
+        <span class="ai-fab__badge" aria-hidden="true">24/7</span>
+      </div>
+      <span class="ai-fab__label">Trợ lý AI</span>
+    </div>
+    <section
+      class="ai-chat"
+      id="aiChat"
+      aria-live="polite"
+      aria-label="Cửa sổ Trợ lý AI"
+    >
+      <header class="ai-chat__header">
+        <div class="ai-chat__title">
+          <svg class="bot" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect
+              x="4"
+              y="7"
+              width="16"
+              height="12"
+              rx="6"
+              fill="#111"
+              opacity=".9"
+            />
+            <circle cx="9" cy="13" r="1.75" fill="#FFD43B" />
+            <circle cx="15" cy="13" r="1.75" fill="#FFD43B" />
+            <rect x="10" y="2" width="4" height="3" rx="1" fill="#111" />
+            <rect x="11" y="5" width="2" height="2" rx="1" fill="#111" />
+          </svg>
+          <span>Trợ lý AI</span>
+        </div>
+        <button class="ai-chat__close" id="aiChatClose" aria-label="Đóng">
+          ✕
+        </button>
+      </header>
+      <div class="ai-chat__body" id="aiBody">
+        <div>
+          <strong>Xin chào!</strong> Bạn có thể hỏi tên đồ uống (vd: “coca”,
+          “trà”, “nước suối”). Mình sẽ tìm trong API Winmart và trả lời ngay.
+        </div>
+      </div>
+      <form class="ai-chat__input" id="aiForm">
+        <input
+          id="aiInput"
+          type="text"
+          placeholder="Nhập câu hỏi của bạn..."
+          autocomplete="off"
+        />
+        <button type="submit">Gửi</button>
+      </form>
+    </section>
+  </body>
+  <script src="main.js"></script>
+</html>
